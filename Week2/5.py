@@ -1,29 +1,12 @@
-def rec_rev(a,b,c):
-    if c == 0:
-        b += a[c]
-        print(b)
-        return
-
-    b += a[c]
-    rec_rev(a,b,c-1)
-
-
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Write a function using recursion that takes in a string and returns a reversed copy of the string. (Without using string library support)\n")
+print("Quest - Implement the following recursive problem.\n")
 
 while(1):
     contin = 0
-    
-    a = str(input("Enter the string: "))
-
-    a = list(a)
-    b = ""
-
-    rec_rev(a,b, len(a)-1)
-
+    print("Full question not given.")
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))

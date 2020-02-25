@@ -1,28 +1,32 @@
-def rec_rev(a,b,c):
-    if c == 0:
-        b += a[c]
-        print(b)
+def rec_max(a, maxx):
+    del a[0]
+    if len(a) == 0:
+        print("The max number is: %d"%maxx)
         return
 
-    b += a[c]
-    rec_rev(a,b,c-1)
-
+    if(maxx < a[0]):
+        maxx = a[0]
+    
+    rec_max(a, maxx)
 
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Write a function using recursion that takes in a string and returns a reversed copy of the string. (Without using string library support)\n")
+print("Quest - Write a recursive function that has a parameter representing a list of integers and returns the maximum stored in the list.(Without using library support)\n")
 
 while(1):
     contin = 0
     
-    a = str(input("Enter the string: "))
+    a = int(input("Enter the number of elements: "))
+    b = []
 
-    a = list(a)
-    b = ""
+    for i in range(a):
+        b.append(int(input("Enter the elemets %d: "%(i+1))))
 
-    rec_rev(a,b, len(a)-1)
+    maxx = b[0]
+
+    rec_max(b, maxx)
 
 
     while(1):

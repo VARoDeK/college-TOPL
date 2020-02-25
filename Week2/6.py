@@ -1,29 +1,23 @@
-def rec_rev(a,b,c):
-    if c == 0:
-        b += a[c]
-        print(b)
-        return
+def rec_count(a):
+    if(a<10):
+        return 1
 
-    b += a[c]
-    rec_rev(a,b,c-1)
-
+    return 1+rec_count(a/10)
 
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Write a function using recursion that takes in a string and returns a reversed copy of the string. (Without using string library support)\n")
+print("Quest - Find number of digits in a number\n")
 
 while(1):
     contin = 0
     
-    a = str(input("Enter the string: "))
+    a= int(input("Enter the number: "))
 
-    a = list(a)
-    b = ""
+    b = rec_count(a)
 
-    rec_rev(a,b, len(a)-1)
-
+    print("The number of digits is: %d"%b)
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))

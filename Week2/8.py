@@ -1,29 +1,28 @@
-def rec_rev(a,b,c):
-    if c == 0:
-        b += a[c]
-        print(b)
-        return
+def rec_triangle(a,b):
+    if(len(a) <= 1):
+        b.append(1)
+        return b
 
-    b += a[c]
-    rec_rev(a,b,c-1)
-
+    b.append(a[0] + a[1])
+    del a[0]
+    c = rec_triangle(a,b)
+    return c
 
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Write a function using recursion that takes in a string and returns a reversed copy of the string. (Without using string library support)\n")
+print("Quest - Write a function which implements the Pascal's triangle:\n")
 
 while(1):
     contin = 0
+
+    x = int(input("Enter number of lines in triangle: "))
     
-    a = str(input("Enter the string: "))
-
-    a = list(a)
-    b = ""
-
-    rec_rev(a,b, len(a)-1)
-
+    a = [1]
+    for i in range(x):
+        print(a, sep=" ")
+        a = rec_triangle(a,[1])
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))
