@@ -1,19 +1,28 @@
+def rec_mult(a,b):
+    if(a == 1):
+        return b
+    
+    b += rec_mult(a-1, b)
+    return b
+
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Print Pattern.\n")
+print("Quest - Write a function that takes in two numbers and recursively multiplies them together.\n")
 
 while(1):
     contin = 0
-    a = int(input("Max no of stars: "))
-    a = a+1
 
-    for i in range(1,a,2):
-        print("*"*i)
-    a = i-2    
-    for i in range(a,0,-2):
-        print("*"*i)
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    if(a<b):
+        x = rec_mult(a,b)
+    else:
+        x = rec_mult(b,a)
+
+    print("The product is: %d"%x)
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))

@@ -1,19 +1,24 @@
+def rec_print(a):
+    if(a == 0):
+        print("%d"%a)
+        return
+
+    print("%d"%a, end=", ")
+    rec_print(a-1)
+
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Print Pattern.\n")
+print("Quest - Write a function using recursion to print numbers from n to 0.\n")
 
 while(1):
     contin = 0
-    a = int(input("Max no of stars: "))
-    a = a+1
+    
+    a = int(input("Enter the number: "))
 
-    for i in range(1,a,2):
-        print("*"*i)
-    a = i-2    
-    for i in range(a,0,-2):
-        print("*"*i)
+    print("Patter: ", end="")
+    rec_print(a)
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))

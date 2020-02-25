@@ -1,19 +1,25 @@
+def rec_exp(a,b):
+    if(a == 1):
+        return b
+    
+    b *= rec_exp(a-1, b)
+    return b
+
 print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Print Pattern.\n")
+print("Quest - Write a function that takes in a base and an exp and recursively computes baseexp (Without using ** operator).\n")
 
 while(1):
     contin = 0
-    a = int(input("Max no of stars: "))
-    a = a+1
 
-    for i in range(1,a,2):
-        print("*"*i)
-    a = i-2    
-    for i in range(a,0,-2):
-        print("*"*i)
+    a = int(input("Enter base number: "))
+    b = int(input("Enter power number: "))
+
+    x = rec_exp(b,a)
+
+    print("The answer is: %d"%x)
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))

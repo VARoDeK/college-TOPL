@@ -20,8 +20,8 @@ print("Quest - Write a function to compute the greatest common divisor (GCD) of 
 
 while(1):
     contin = 0
-    a = int(input("Firstr number: "))
-    b = int(input("Firstr number: "))
+    a = int(input("First number: "))
+    b = int(input("Second number: "))
 
     gcd(a,b)
 

@@ -19,8 +19,8 @@ print("Quest - Write a function to get the least common multiple (LCM) of two po
 
 while(1):
     contin = 0
-    a = int(input("Firstr number: "))
-    b = int(input("Firstr number: "))
+    a = int(input("First number: "))
+    b = int(input("Second number: "))
 
     c = gcd(a,b)
 

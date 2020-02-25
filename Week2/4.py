@@ -2,18 +2,11 @@ print("TOPL Lab")
 print("Vaibhav Gutpa")
 print("Enroll - 9917103128")
 print("Batch F4")
-print("Quest - Print Pattern.\n")
+print("Quest - Write a function using recursion that takes in a string and returns a reversed copy of the string. (Without using string library support)\n")
 
 while(1):
     contin = 0
-    a = int(input("Max no of stars: "))
-    a = a+1
-
-    for i in range(1,a,2):
-        print("*"*i)
-    a = i-2    
-    for i in range(a,0,-2):
-        print("*"*i)
+    print("Hello")
 
     while(1):
         a = str(input("\nDo you want to continue? (y/n)"))
